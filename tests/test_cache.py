@@ -3,8 +3,6 @@ import os
 import time
 from pathlib import Path
 
-import pytest
-
 from atomic_lru_cache import Cache, persistent_lru_cache
 
 

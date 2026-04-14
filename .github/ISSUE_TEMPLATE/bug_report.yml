@@ -1,0 +1,42 @@
+name: Bug report
+description: Report a bug to help us improve
+title: "[Bug]: "
+labels: ["bug", "needs-repro"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear and concise description of the bug.
+      placeholder: Describe the unexpected behavior...
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Smallest code snippet that triggers the bug.
+      render: python
+    validations:
+      required: true
+  - type: input
+    id: python-version
+    attributes:
+      label: Python version
+      placeholder: "3.12.3"
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: "Windows 11 / Ubuntu 24.04 / macOS 14"
+    validations:
+      required: true
+  - type: input
+    id: package-version
+    attributes:
+      label: atomic-lru-cache version
+      placeholder: "0.1.0"
+    validations:
+      required: true
