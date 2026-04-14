@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "atomic-lru-cache"
+version = "0.1.0"
+description = "Persistent LRU cache that survives process restarts, forks, and crashes. Atomic writes, portable file locking, zero dependencies, ~250 lines of Python."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+authors = [{name = "ElromEvedElElyon"}]
+keywords = ["lru", "cache", "persistent", "atomic", "flock", "lru-cache", "disk-cache", "memoize"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Filesystems",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "pytest-cov", "ruff"]
+
+[project.urls]
+Homepage = "https://github.com/ElromEvedElElyon/atomic-lru-cache"
+Issues = "https://github.com/ElromEvedElElyon/atomic-lru-cache/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/atomic_lru_cache"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
